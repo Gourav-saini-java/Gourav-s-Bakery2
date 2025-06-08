@@ -1,0 +1,308 @@
+<html>
+
+<head>
+    <title>Place your Order</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #dfb9b2;
+            color: #383852;
+        }
+
+        header {
+            background-color: #522b5b;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            text-align: center;
+            margin: 0px;
+            padding: 10px;
+            position: sticky;
+            top: 0px;
+            overflow: hidden;
+            background-color: #8a5b9e;
+            box-shadow: 5px 5px 12px #00000035;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #190019;
+            transition: color 1.1s ease, background-color 0.3s ease, transform 0.3s ease, border 0.3s ease, border-radius 0.5s ease;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: whitesmoke;
+            background-color: #7c2c9e;
+            padding: 3px;
+            border: 2px solid #7c2c9e;
+            border-radius: 10px;
+            transform: scale(1.1);
+        }
+
+        .logo {
+            float: left;
+            position: absolute;
+            top: 25px;
+            left: 20px;
+            border-radius: 50%;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fbe4d8;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #f39f5a;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 16px;
+        }
+
+        button:hover {
+            background-color: #e65a50;
+        }
+
+        .confirmation {
+            margin-top: 24px;
+            padding: 16px;
+            background-color: #dff0d8;
+            color: #3c763d;
+            border: 1px solid #d6e9c6;
+            border-radius: 5px;
+            display: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="cake.png" style="width: 150px; height: 150px;">
+        <h1>Gourav's Bakery</h1>
+        <h3>Delicious Cakes Delivered to Your Doorstep</h3>
+        <p>Order your favorite cake online and enjoy the taste of happiness!</p>
+    </header>
+    <nav>
+        <a href="Gourav's Bakery.html #">Home</a>
+        <a href="Gourav's Bakery.html #cakes">Cakes</a>
+        <a href="Gourav's Bakery.html #contact">Contact Us</a>
+        <a href="Place your order.html">Place Your order</a>
+    </nav>
+
+    <div class="container">
+        <h2>Place Your Order</h2>
+        <form id="cakeOrderForm">
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="contact">Contact Number:</label>
+                <input type="tel" id="contact" name="contact" required>
+            </div>
+
+            <div class="form-group">
+                <label for="cakeType">Type of Cake:</label>
+                <select id="cakeType" name="cakeType" required>
+                    <option value="">--Select a Cake--</option>
+                    <option value="Chocolate">Chocolate Cake</option>
+                    <option value="Vanilla">Vanilla Cake</option>
+                    <option value="Red Velvet">Red Velvet Cake</option>
+                    <option value="Butterscotch">Butterscotch Cake</option>
+                    <option value="Cheesecake">Cheese Cake</option>
+                    <option value="Coconut">Coconut Cake</option>
+                    <option value="Pineapple">Pineapple Cake</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="state">Select State:</label>
+                <select id="state" name="state" onchange="updateCities()" required>
+                    <option value="">-- Select State --</option>
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Chhattisgarh">Chhattisgarh</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                    <option value="Jammu & Kashmir">Jammu & Kashmir</option>
+                    <option value="Jharkhand">Jharkhand</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Ladakh">Ladakh</option>
+                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Manipur">Manipur</option>
+                    <option value="Meghalaya">Meghalaya</option>
+                    <option value="Mizoram">Mizoram</option>
+                    <option value="Nagaland">Nagaland</option>
+                    <option value="Odisha">Odisha</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Sikkim">Sikkim</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Telangana">Telangana</option>
+                    <option value="Tripura">Tripura</option>
+                    <option value="Uttarakhand">Uttarakhand</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="West Bengal">West Bengal</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="city">Select City:</label>
+                <select id="city">
+                    <option value="">-- Select City --</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="deliveryDate">Delivery Date:</label>
+                <input type="date" id="deliveryDate" name="deliveryDate" required>
+            </div>
+
+            <div class="form-group">
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time" required>
+            </div>
+
+            <button type="button" id="submitOrder">Submit Order</button>
+        </form>
+
+        <div id="confirmation" class="confirmation"></div>
+    </div>
+
+    <script>
+        // State and Cities Mapping
+        const cityData = {
+            "Andhra Pradesh": ["Amaravati", "Anantapur", "Chittoor", "Tirupati", "Vijayawada", "Visakhapatnam"],
+            "Arunachal Pradesh": ["Changlang", "Dibang Valley", "East Kameng", "East Siang", "Itanagar", "Kamle"],
+            "Assam": ["Chirang", "Dibrugarh", "Golaghat", "Guwahati", "Lakhimpur", "Majuli"],
+            "Bihar": ["Bhagalpur", "Darbhanga", "Gaya", "Muzaffarpur", "Siwan", "Sasaram"],
+            "Chhattisgarh": ["Ambikapur", "Bilaspur", "Champa", "Durg", "Jagdalpur", "Raipur"],
+            "Goa": ["Chaudi", "Mapusa", "Margao", "Panaji", "Ponda", "Vasco da Gama"],
+            "Gujarat": ["Anand", "Ahmedabad", "Bhuj", "Rajkot", "Surat", "Vadodara"],
+            "Haryana": ["Ambala", "Gurugram", "Faridabad", "Kurukshetra", "Panipat", "Rohtak"],
+            "Himachal Pradesh": ["Dalhousie", "Dharamsala", "Kullu", "Manali", "Palampur", "Shimla"],
+            "Jammu & Kashmir": ["Jammu", "Kathua", "Kulgam", "Pulwama", "Srinagar", "Udhampur"],
+            "Jharkhand": ["Dhanbad", "Hazaribagh", "Jamshedpur", "Jamtara", "Ranchi", "Sini"],
+            "Karnataka": ["Banglore", "Gangavati", "Kolar", "Manglore", "Mysore", "Robertsonpet"],
+            "Kerala": ["Kochi", "Kollam", "Kannur", "Kozhikode", "Thiruvananthapuram", "Thrissur"],
+            "Ladakh": ["Chuglamsar", "Kargil", "Leh", "Spituk"],
+            "Madhya Pradesh": ["Bhopal", "Gwalior", "Indore", "Jabalpur", "Sagar", "Ujjain"],
+            "Maharashtra": ["Amravati", "Kolhapur", "Malegaon", "Mumbai", "Nagpur", "Pune"],
+            "Manipur": ["Bishnupur", "Chandel", "Imphal", "Kamjong", "Noney", "Thoubal"],
+            "Meghalaya": ["Jowai", "Mawkyrwat", "Ribhoi", "Shillong", "Tura", "Williamnagar"],
+            "Mizoram": ["Aizawl", "Champhai", "Kolasib", "Lawngtlai", "Mamit", "Saiha"],
+            "Nagaland": ["Dimapur", "Kohima", "Mokokchung", "Peren", "Tuensang", "Wokha"],
+            "Odisha": ["Baleshwar", "Gajapati", "Jagatsinghapur", "Malkangiri", "Puri", "Sundargarh"],
+            "Punjab": ["Amritsar", "Bathinda", "Jalandhar", "Ludhiana", "Patiala", "Shahid Bhagat Singh Nagar"],
+            "Rajasthan": ["Ajmer", "Bikaner", "Jaipur", "Jodhpur", "Kota", "Udaipur"],
+            "Sikkim": ["Gangtok", "Mangan", "Namchi", "Rangpo", "Rhenak", "Singtam"],
+            "Tamil Nadu": ["Chennai", "Kanchipuram ", "Kanniyakumari", "Madurai", "Ramanathapuram", "Tiruchirappalli"],
+            "Telangana": ["Adilabad", "Hyderabad", "Karimnagar", "Medak", "Nizamabad", "Rangareddy"],
+            "Tripura": ["Agartala", "Dharmanagar", "Kamalpur", "Madhuban", "Narsingarh", "Sonamura"],
+            "Uttarakhand": ["Bageshwar", "Champawat", "Dehradun", "Haridwar", "Nainital", "Uttarkashi"],
+            "Uttar Pradesh": ["Allahbad", "Gorakhpur", "Jaunpur", "Lucknow", "Mathura", "Varanasi"],
+            "West Bengal": ["Darjeeling", "Howrah", "Kolkata", "Murshidabad", "Purulia", "Uttar Dinajpur"],
+        };
+
+        function updateCities() {
+            const stateSelect = document.getElementById("state");
+            const citySelect = document.getElementById("city");
+            const selectedState = stateSelect.value;
+
+            // Clear previous cities
+            citySelect.innerHTML = '<option value="">-- Select City --</option>';
+
+            // Populate cities based on selected state
+            if (selectedState in cityData) {
+                cityData[selectedState].forEach(city => {
+                    const option = document.createElement("option");
+                    option.value = city;
+                    option.textContent = city;
+                    citySelect.appendChild(option);
+                });
+            }
+        }
+
+        document.getElementById('submitOrder').addEventListener('click', function () {
+            // Collect form data
+            const name = document.getElementById('name').value;
+            const contact = document.getElementById('contact').value;
+            const cakeType = document.getElementById('cakeType').value;
+            const deliveryDate = document.getElementById('deliveryDate').value;
+            const time = document.getElementById('time').value;
+            const state = document.getElementById('state').value;
+
+            // Simple validation
+            if (!name || !contact || !cakeType || !deliveryDate || !time || !state) {
+                window.alert('Please fill in all fields before submitting your order.');
+                return;
+            }
+
+            // Display confirmation message
+            const confirmationDiv = document.getElementById('confirmation');
+            confirmationDiv.style.display = 'block';
+            confirmationDiv.innerHTML = `Thank you, <strong>${name}</strong>! Your order for a <strong>${cakeType}</strong> cake has been received. It will be delivered on <strong>${deliveryDate}</strong> at <strong>${time}</strong>. We will contact you at <strong>${contact}</strong> for any further updates.`;
+
+            // Clear form
+            document.getElementById('cakeOrderForm').reset();
+        });
+    </script>
+
+    <footer>
+        <section id="contact">
+            <p>&copy; 2025 Gourav's Bakery. All rights reserved.</p>
+        </section>
+    </footer>
+
+</body>
+
+</html>
